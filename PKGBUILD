@@ -4,9 +4,8 @@
 
 pkgbase=mhwd-xerolinux
 pkgname=('mhwd-xerolinux' 'mhwd-db-xerolinux')
-pkgname=mhwd-xerolinux
-pkgver=0.6.11
-pkgrel=1
+pkgver=0.6.12
+pkgrel=3
 pkgdesc="Manjaro's Hardware Detection for XeroLinux"
 arch=(x86_64)
 url="https://github.com/xerolinux/mhwd-xerolinux"
@@ -50,7 +49,7 @@ package_mhwd-xerolinux() {
 
 package_mhwd-db-xerolinux() {
   pkgdesc="mhwd-xerolinux Database"
-  depends=('libnotify' 'mhwd-nvidia' 'mhwd-nvidia-390xx' 'mhwd-nvidia-470xx' 'mhwd-amdgpu' 'mhwd-ati' 'mhwd-nvidia>=455')
+  depends=('libnotify' 'mhwd-nvidia>=455' 'mhwd-nvidia-390xx' 'mhwd-nvidia-470xx' 'mhwd-amdgpu' 'mhwd-ati')
   provides=('mhwd-db' 'mhwd-db-xerolinux')
   conflicts=('mhwd-db' 'mhwd-db-xerolinux')
   install=mhwd-db.install
